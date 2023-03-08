@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA90A9A529B855EA00F6E6EA /* sluv_ios_renewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90A9A429B855EA00F6E6EA /* sluv_ios_renewApp.swift */; };
+		BA90A9A729B855EA00F6E6EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90A9A629B855EA00F6E6EA /* ContentView.swift */; };
+		BA90A9A929B855EB00F6E6EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA90A9A829B855EB00F6E6EA /* Assets.xcassets */; };
+		BA90A9AC29B855EB00F6E6EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA90A9AB29B855EB00F6E6EA /* Preview Assets.xcassets */; };
+		BA90A9B629B855EB00F6E6EA /* sluv_ios_renewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90A9B529B855EB00F6E6EA /* sluv_ios_renewTests.swift */; };
+		BA90A9C029B855EB00F6E6EA /* sluv_ios_renewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90A9BF29B855EB00F6E6EA /* sluv_ios_renewUITests.swift */; };
+		BA90A9C229B855EB00F6E6EA /* sluv_ios_renewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90A9C129B855EB00F6E6EA /* sluv_ios_renewUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA90A9B229B855EB00F6E6EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA90A99929B855EA00F6E6EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA90A9A029B855EA00F6E6EA;
+			remoteInfo = "sluv-ios-renew";
+		};
+		BA90A9BC29B855EB00F6E6EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA90A99929B855EA00F6E6EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA90A9A029B855EA00F6E6EA;
+			remoteInfo = "sluv-ios-renew";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA90A9A129B855EA00F6E6EA /* sluv-ios-renew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sluv-ios-renew.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA90A9A429B855EA00F6E6EA /* sluv_ios_renewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sluv_ios_renewApp.swift; sourceTree = "<group>"; };
+		BA90A9A629B855EA00F6E6EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BA90A9A829B855EB00F6E6EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA90A9AB29B855EB00F6E6EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BA90A9B129B855EB00F6E6EA /* sluv-ios-renewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sluv-ios-renewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA90A9B529B855EB00F6E6EA /* sluv_ios_renewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sluv_ios_renewTests.swift; sourceTree = "<group>"; };
+		BA90A9BB29B855EB00F6E6EA /* sluv-ios-renewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sluv-ios-renewUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA90A9BF29B855EB00F6E6EA /* sluv_ios_renewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sluv_ios_renewUITests.swift; sourceTree = "<group>"; };
+		BA90A9C129B855EB00F6E6EA /* sluv_ios_renewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sluv_ios_renewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA90A99E29B855EA00F6E6EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA90A9AE29B855EB00F6E6EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA90A9B829B855EB00F6E6EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA90A99829B855EA00F6E6EA = {
+			isa = PBXGroup;
+			children = (
+				BA90A9A329B855EA00F6E6EA /* sluv-ios-renew */,
+				BA90A9B429B855EB00F6E6EA /* sluv-ios-renewTests */,
+				BA90A9BE29B855EB00F6E6EA /* sluv-ios-renewUITests */,
+				BA90A9A229B855EA00F6E6EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA90A9A229B855EA00F6E6EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA90A9A129B855EA00F6E6EA /* sluv-ios-renew.app */,
+				BA90A9B129B855EB00F6E6EA /* sluv-ios-renewTests.xctest */,
+				BA90A9BB29B855EB00F6E6EA /* sluv-ios-renewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA90A9A329B855EA00F6E6EA /* sluv-ios-renew */ = {
+			isa = PBXGroup;
+			children = (
+				BA90A9A429B855EA00F6E6EA /* sluv_ios_renewApp.swift */,
+				BA90A9A629B855EA00F6E6EA /* ContentView.swift */,
+				BA90A9A829B855EB00F6E6EA /* Assets.xcassets */,
+				BA90A9AA29B855EB00F6E6EA /* Preview Content */,
+			);
+			path = "sluv-ios-renew";
+			sourceTree = "<group>";
+		};
+		BA90A9AA29B855EB00F6E6EA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BA90A9AB29B855EB00F6E6EA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BA90A9B429B855EB00F6E6EA /* sluv-ios-renewTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA90A9B529B855EB00F6E6EA /* sluv_ios_renewTests.swift */,
+			);
+			path = "sluv-ios-renewTests";
+			sourceTree = "<group>";
+		};
+		BA90A9BE29B855EB00F6E6EA /* sluv-ios-renewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BA90A9BF29B855EB00F6E6EA /* sluv_ios_renewUITests.swift */,
+				BA90A9C129B855EB00F6E6EA /* sluv_ios_renewUITestsLaunchTests.swift */,
+			);
+			path = "sluv-ios-renewUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA90A9A029B855EA00F6E6EA /* sluv-ios-renew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA90A9C529B855EB00F6E6EA /* Build configuration list for PBXNativeTarget "sluv-ios-renew" */;
+			buildPhases = (
+				BA90A99D29B855EA00F6E6EA /* Sources */,
+				BA90A99E29B855EA00F6E6EA /* Frameworks */,
+				BA90A99F29B855EA00F6E6EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "sluv-ios-renew";
+			productName = "sluv-ios-renew";
+			productReference = BA90A9A129B855EA00F6E6EA /* sluv-ios-renew.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA90A9B029B855EB00F6E6EA /* sluv-ios-renewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA90A9C829B855EB00F6E6EA /* Build configuration list for PBXNativeTarget "sluv-ios-renewTests" */;
+			buildPhases = (
+				BA90A9AD29B855EB00F6E6EA /* Sources */,
+				BA90A9AE29B855EB00F6E6EA /* Frameworks */,
+				BA90A9AF29B855EB00F6E6EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA90A9B329B855EB00F6E6EA /* PBXTargetDependency */,
+			);
+			name = "sluv-ios-renewTests";
+			productName = "sluv-ios-renewTests";
+			productReference = BA90A9B129B855EB00F6E6EA /* sluv-ios-renewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BA90A9BA29B855EB00F6E6EA /* sluv-ios-renewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA90A9CB29B855EB00F6E6EA /* Build configuration list for PBXNativeTarget "sluv-ios-renewUITests" */;
+			buildPhases = (
+				BA90A9B729B855EB00F6E6EA /* Sources */,
+				BA90A9B829B855EB00F6E6EA /* Frameworks */,
+				BA90A9B929B855EB00F6E6EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA90A9BD29B855EB00F6E6EA /* PBXTargetDependency */,
+			);
+			name = "sluv-ios-renewUITests";
+			productName = "sluv-ios-renewUITests";
+			productReference = BA90A9BB29B855EB00F6E6EA /* sluv-ios-renewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA90A99929B855EA00F6E6EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					BA90A9A029B855EA00F6E6EA = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					BA90A9B029B855EB00F6E6EA = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = BA90A9A029B855EA00F6E6EA;
+					};
+					BA90A9BA29B855EB00F6E6EA = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = BA90A9A029B855EA00F6E6EA;
+					};
+				};
+			};
+			buildConfigurationList = BA90A99C29B855EA00F6E6EA /* Build configuration list for PBXProject "sluv-ios-renew" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA90A99829B855EA00F6E6EA;
+			productRefGroup = BA90A9A229B855EA00F6E6EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA90A9A029B855EA00F6E6EA /* sluv-ios-renew */,
+				BA90A9B029B855EB00F6E6EA /* sluv-ios-renewTests */,
+				BA90A9BA29B855EB00F6E6EA /* sluv-ios-renewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA90A99F29B855EA00F6E6EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA90A9AC29B855EB00F6E6EA /* Preview Assets.xcassets in Resources */,
+				BA90A9A929B855EB00F6E6EA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA90A9AF29B855EB00F6E6EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA90A9B929B855EB00F6E6EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA90A99D29B855EA00F6E6EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA90A9A729B855EA00F6E6EA /* ContentView.swift in Sources */,
+				BA90A9A529B855EA00F6E6EA /* sluv_ios_renewApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA90A9AD29B855EB00F6E6EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA90A9B629B855EB00F6E6EA /* sluv_ios_renewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA90A9B729B855EB00F6E6EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA90A9C229B855EB00F6E6EA /* sluv_ios_renewUITestsLaunchTests.swift in Sources */,
+				BA90A9C029B855EB00F6E6EA /* sluv_ios_renewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA90A9B329B855EB00F6E6EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA90A9A029B855EA00F6E6EA /* sluv-ios-renew */;
+			targetProxy = BA90A9B229B855EB00F6E6EA /* PBXContainerItemProxy */;
+		};
+		BA90A9BD29B855EB00F6E6EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA90A9A029B855EA00F6E6EA /* sluv-ios-renew */;
+			targetProxy = BA90A9BC29B855EB00F6E6EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BA90A9C329B855EB00F6E6EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA90A9C429B855EB00F6E6EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA90A9C629B855EB00F6E6EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"sluv-ios-renew/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sluv.sluv-ios-renew";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA90A9C729B855EB00F6E6EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"sluv-ios-renew/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sluv.sluv-ios-renew";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BA90A9C929B855EB00F6E6EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sluv.sluv-ios-renewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sluv-ios-renew.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sluv-ios-renew";
+			};
+			name = Debug;
+		};
+		BA90A9CA29B855EB00F6E6EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sluv.sluv-ios-renewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sluv-ios-renew.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sluv-ios-renew";
+			};
+			name = Release;
+		};
+		BA90A9CC29B855EB00F6E6EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sluv.sluv-ios-renewUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "sluv-ios-renew";
+			};
+			name = Debug;
+		};
+		BA90A9CD29B855EB00F6E6EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sluv.sluv-ios-renewUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "sluv-ios-renew";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA90A99C29B855EA00F6E6EA /* Build configuration list for PBXProject "sluv-ios-renew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA90A9C329B855EB00F6E6EA /* Debug */,
+				BA90A9C429B855EB00F6E6EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA90A9C529B855EB00F6E6EA /* Build configuration list for PBXNativeTarget "sluv-ios-renew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA90A9C629B855EB00F6E6EA /* Debug */,
+				BA90A9C729B855EB00F6E6EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA90A9C829B855EB00F6E6EA /* Build configuration list for PBXNativeTarget "sluv-ios-renewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA90A9C929B855EB00F6E6EA /* Debug */,
+				BA90A9CA29B855EB00F6E6EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA90A9CB29B855EB00F6E6EA /* Build configuration list for PBXNativeTarget "sluv-ios-renewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA90A9CC29B855EB00F6E6EA /* Debug */,
+				BA90A9CD29B855EB00F6E6EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA90A99929B855EA00F6E6EA /* Project object */;
+}
