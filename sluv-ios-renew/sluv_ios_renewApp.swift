@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct sluv_ios_renewApp: App {
+    @State var isLoggedIn: Bool = false;
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if !isLoggedIn {
+                ContentView(isLoggedIn: self.$isLoggedIn)
+            }
         }
     }
 }
