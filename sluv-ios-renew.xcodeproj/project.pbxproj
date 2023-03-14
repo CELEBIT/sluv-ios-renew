@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA67EB3429C05BD0007B87AD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BA67EB3329C05BD0007B87AD /* Alamofire */; };
+		BA67EB3729C05F76007B87AD /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BA67EB3629C05F76007B87AD /* KakaoSDKAuth */; };
+		BA67EB3929C05F76007B87AD /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = BA67EB3829C05F76007B87AD /* KakaoSDKCommon */; };
+		BA67EB3B29C05F76007B87AD /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = BA67EB3A29C05F76007B87AD /* KakaoSDKUser */; };
+		BA67EB3D29C0618C007B87AD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA67EB3C29C0618C007B87AD /* ProfileView.swift */; };
 		BA90A9A529B855EA00F6E6EA /* sluv_ios_renewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90A9A429B855EA00F6E6EA /* sluv_ios_renewApp.swift */; };
-		BA90A9A729B855EA00F6E6EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90A9A629B855EA00F6E6EA /* ContentView.swift */; };
+		BA90A9A729B855EA00F6E6EA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90A9A629B855EA00F6E6EA /* LoginView.swift */; };
 		BA90A9A929B855EB00F6E6EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA90A9A829B855EB00F6E6EA /* Assets.xcassets */; };
 		BA90A9AC29B855EB00F6E6EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA90A9AB29B855EB00F6E6EA /* Preview Assets.xcassets */; };
 		BA90A9B629B855EB00F6E6EA /* sluv_ios_renewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90A9B529B855EB00F6E6EA /* sluv_ios_renewTests.swift */; };
@@ -61,9 +66,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA67EB3C29C0618C007B87AD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BA90A9A129B855EA00F6E6EA /* sluv-ios-renew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sluv-ios-renew.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA90A9A429B855EA00F6E6EA /* sluv_ios_renewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sluv_ios_renewApp.swift; sourceTree = "<group>"; };
-		BA90A9A629B855EA00F6E6EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BA90A9A629B855EA00F6E6EA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BA90A9A829B855EB00F6E6EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA90A9AB29B855EB00F6E6EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BA90A9B129B855EB00F6E6EA /* sluv-ios-renewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sluv-ios-renewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +95,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA67EB3B29C05F76007B87AD /* KakaoSDKUser in Frameworks */,
+				BA67EB3429C05BD0007B87AD /* Alamofire in Frameworks */,
+				BA67EB3929C05F76007B87AD /* KakaoSDKCommon in Frameworks */,
+				BA67EB3729C05F76007B87AD /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +146,8 @@
 				BAA05DC429BA198900EE9EB1 /* Info.plist */,
 				BAF97DEC29B8DDE5000C75BA /* sluv-ios-renew.entitlements */,
 				BA90A9A429B855EA00F6E6EA /* sluv_ios_renewApp.swift */,
-				BA90A9A629B855EA00F6E6EA /* ContentView.swift */,
+				BA67EB3C29C0618C007B87AD /* ProfileView.swift */,
+				BA90A9A629B855EA00F6E6EA /* LoginView.swift */,
 				BA90A9A829B855EB00F6E6EA /* Assets.xcassets */,
 				BA90A9AA29B855EB00F6E6EA /* Preview Content */,
 			);
@@ -200,6 +211,12 @@
 			dependencies = (
 			);
 			name = "sluv-ios-renew";
+			packageProductDependencies = (
+				BA67EB3329C05BD0007B87AD /* Alamofire */,
+				BA67EB3629C05F76007B87AD /* KakaoSDKAuth */,
+				BA67EB3829C05F76007B87AD /* KakaoSDKCommon */,
+				BA67EB3A29C05F76007B87AD /* KakaoSDKUser */,
+			);
 			productName = "sluv-ios-renew";
 			productReference = BA90A9A129B855EA00F6E6EA /* sluv-ios-renew.app */;
 			productType = "com.apple.product-type.application";
@@ -272,6 +289,10 @@
 				Base,
 			);
 			mainGroup = BA90A99829B855EA00F6E6EA;
+			packageReferences = (
+				BA67EB3229C05BD0007B87AD /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BA67EB3529C05F76007B87AD /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+			);
 			productRefGroup = BA90A9A229B855EA00F6E6EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -341,7 +362,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA90A9A729B855EA00F6E6EA /* ContentView.swift in Sources */,
+				BA90A9A729B855EA00F6E6EA /* LoginView.swift in Sources */,
+				BA67EB3D29C0618C007B87AD /* ProfileView.swift in Sources */,
 				BA90A9A529B855EA00F6E6EA /* sluv_ios_renewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -665,6 +687,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BA67EB3229C05BD0007B87AD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		BA67EB3529C05F76007B87AD /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BA67EB3329C05BD0007B87AD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA67EB3229C05BD0007B87AD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		BA67EB3629C05F76007B87AD /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA67EB3529C05F76007B87AD /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		BA67EB3829C05F76007B87AD /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA67EB3529C05F76007B87AD /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		BA67EB3A29C05F76007B87AD /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA67EB3529C05F76007B87AD /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BA90A99929B855EA00F6E6EA /* Project object */;
 }
