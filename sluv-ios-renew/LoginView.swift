@@ -11,6 +11,8 @@ import Alamofire
 import KakaoSDKCommon
 import KakaoSDKAuth
 import KakaoSDKUser
+import GoogleSignIn
+import GoogleSignInSwift
 
 extension Font {
     static let pretendardSemi_20 = Font.custom("Pretendard-SemiBold", size:20)
@@ -39,7 +41,7 @@ struct LoginView: View {
                     .padding(.bottom, 20.0)
                 Text("셀럽의 아이템 정보 집합소")
                     .font(.pretendardSemi_20)
-                    .foregroundColor(Color(red: 0.14901960784313725, green: 0.14901960784313725, blue: 0.14901960784313725)	)
+                    .foregroundColor(Color(red: 0.14901960784313725, green: 0.14901960784313725, blue: 0.14901960784313725)    )
                 Text("스럽의 정보는 사랑스럽다!")
                     .font(.pretendardRegular_14)
                     .foregroundColor(Color(red: 0.41568627450980394, green: 0.41568627450980394, blue: 0.41568627450980394))
@@ -50,6 +52,7 @@ struct LoginView: View {
             VStack {
                 AppleSigninButton()
                 KakaoSigninButton()
+                GoogleSigninButton()
             }
             .padding()
             Spacer()
@@ -61,6 +64,53 @@ struct LoginView: View {
     
 }
 
+
+let base = String("http://15.165.98.183:8080")
+
+func socialLogin(token: String, snsType: String){
+    let url = base+"/auth/social-login"
+    let body = ["accessToken": token, "snsType": snsType] as Dictionary
+    AF.request(url,
+               method: .post,
+               parameters: body,
+               encoding: JSONEncoding(options: []),
+                headers: ["Content-Type":"application/json", "Accept":"application/json"]).responseJSON
+    { response in
+      switch response.result {
+      case .success:
+        if let data = try! response.result.get() as? [String: Any] {
+          print(data)
+        }
+      case .failure(let error):
+        print("Error: \(error)")
+        return
+      }
+    }
+    
+}
+
+func googleSignin() {
+    guard let rootViewController = UIApplication.shared.windows.first?.rootViewController else {
+            print("Error: root view controller not found")
+            return
+        }
+  GIDSignIn.sharedInstance.signIn(
+    withPresenting: rootViewController) { signInResult, error in
+        guard error == nil else { return }
+            guard let signInResult = signInResult else { return }
+
+            signInResult.user.refreshTokensIfNeeded { user, error in
+                guard error == nil else { return }
+                guard let user = user else { return }
+
+                let idToken = user.idToken
+                let accessToken = user.accessToken.tokenString
+
+                print(accessToken)          // Send ID token to backend (example below).
+                socialLogin(token:accessToken, snsType:"GOOGLE")
+            }
+    }
+}
 
 struct KakaoSigninButton: View{
     var body: some View{
@@ -94,7 +144,33 @@ struct KakaoSigninButton: View{
     }
 }
 
-
+struct GoogleSigninButton: View{
+    var body: some View{
+        HStack{
+            Image("google Logo")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .padding(.leading, 20)
+                .frame(width: 30, height: 30, alignment: .center)
+            Spacer()
+            Text("Sign in with Google")
+            .foregroundColor(.black)
+            Spacer()
+        }
+        .frame(width : UIScreen.main.bounds.width * 0.9, height:50, alignment: .center)
+        .overlay( /// apply a rounded border
+            RoundedRectangle(cornerRadius: 8)
+                .stroke(Color(red: 0.855, green: 0.855, blue: 0.855))
+        )
+        .overlay(
+            GoogleSignInButton(scheme:.light, action: googleSignin)
+                .frame(width : UIScreen.main.bounds.width * 0.9, height:50)
+                .blendMode(.overlay)
+                .opacity(0.1)
+        )
+        
+    }
+}
 
 struct AppleSigninButton : View{
     var body: some View{
@@ -108,13 +184,7 @@ struct AppleSigninButton : View{
                     print("Apple Login Successful")
                     switch authResults.credential{
                         case let appleIDCredential as ASAuthorizationAppleIDCredential:
-//                                     계정 정보 가져오기
-                            let UserIdentifier = appleIDCredential.user
-                            let fullName = appleIDCredential.fullName
-                            let name =  (fullName?.familyName ?? "") + (fullName?.givenName ?? "")
-                            let email = appleIDCredential.email
                             let IdentityToken = String(data: appleIDCredential.identityToken!, encoding: .utf8)
-                            let AuthorizationCode = String(data: appleIDCredential.authorizationCode!, encoding: .utf8)
                             socialLogin(token:IdentityToken!, snsType:"APPLE")
     
                     default:
@@ -132,30 +202,6 @@ struct AppleSigninButton : View{
 }
 
 
-
-let base = String("http://15.165.98.183:8080")
-
-func socialLogin(token: String, snsType: String){
-    let url = base+"/auth/social-login"
-    let body = ["accessToken": token, "snsType": snsType] as Dictionary
-    AF.request(url,
-               method: .post,
-               parameters: body,
-               encoding: JSONEncoding(options: []),
-                headers: ["Content-Type":"application/json", "Accept":"application/json"]).responseJSON
-    { response in
-      switch response.result {
-      case .success:
-        if let data = try! response.result.get() as? [String: Any] {
-          print(data)
-        }
-      case .failure(let error):
-        print("Error: \(error)")
-        return
-      }
-    }
-    
-}
 
 
 

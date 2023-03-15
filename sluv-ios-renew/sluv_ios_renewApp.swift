@@ -8,6 +8,8 @@
 import SwiftUI
 import KakaoSDKCommon
 import KakaoSDKAuth
+import GoogleSignIn
+import GoogleSignInSwift
 
 @main
 struct sluv_ios_renewApp: App {
@@ -24,6 +26,14 @@ struct sluv_ios_renewApp: App {
                         if (AuthApi.isKakaoTalkLoginUrl(url)) {
                             _ = AuthController.handleOpenUrl(url: url)
                         }
+                    }
+                    .onOpenURL { url in
+                      GIDSignIn.sharedInstance.handle(url)
+                    }
+                    .onAppear {
+                      GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+                        // Check if `user` exists; otherwise, do something with `error`
+                      }
                     }
             }
             else{

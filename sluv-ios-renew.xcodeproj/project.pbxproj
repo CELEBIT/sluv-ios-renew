@@ -19,6 +19,8 @@
 		BA90A9B629B855EB00F6E6EA /* sluv_ios_renewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90A9B529B855EB00F6E6EA /* sluv_ios_renewTests.swift */; };
 		BA90A9C029B855EB00F6E6EA /* sluv_ios_renewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90A9BF29B855EB00F6E6EA /* sluv_ios_renewUITests.swift */; };
 		BA90A9C229B855EB00F6E6EA /* sluv_ios_renewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90A9C129B855EB00F6E6EA /* sluv_ios_renewUITestsLaunchTests.swift */; };
+		BAA0143129C1ADB10084B54D /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = BAA0143029C1ADB10084B54D /* GoogleSignIn */; };
+		BAA0143329C1ADB10084B54D /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BAA0143229C1ADB10084B54D /* GoogleSignInSwift */; };
 		BAA05DD329BA1CEF00EE9EB1 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAA05DCA29BA1CEF00EE9EB1 /* Pretendard-Regular.otf */; };
 		BAA05DD429BA1CEF00EE9EB1 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAA05DCA29BA1CEF00EE9EB1 /* Pretendard-Regular.otf */; };
 		BAA05DD529BA1CEF00EE9EB1 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BAA05DCA29BA1CEF00EE9EB1 /* Pretendard-Regular.otf */; };
@@ -95,8 +97,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAA0143129C1ADB10084B54D /* GoogleSignIn in Frameworks */,
 				BA67EB3B29C05F76007B87AD /* KakaoSDKUser in Frameworks */,
 				BA67EB3429C05BD0007B87AD /* Alamofire in Frameworks */,
+				BAA0143329C1ADB10084B54D /* GoogleSignInSwift in Frameworks */,
 				BA67EB3929C05F76007B87AD /* KakaoSDKCommon in Frameworks */,
 				BA67EB3729C05F76007B87AD /* KakaoSDKAuth in Frameworks */,
 			);
@@ -216,6 +220,8 @@
 				BA67EB3629C05F76007B87AD /* KakaoSDKAuth */,
 				BA67EB3829C05F76007B87AD /* KakaoSDKCommon */,
 				BA67EB3A29C05F76007B87AD /* KakaoSDKUser */,
+				BAA0143029C1ADB10084B54D /* GoogleSignIn */,
+				BAA0143229C1ADB10084B54D /* GoogleSignInSwift */,
 			);
 			productName = "sluv-ios-renew";
 			productReference = BA90A9A129B855EA00F6E6EA /* sluv-ios-renew.app */;
@@ -292,6 +298,7 @@
 			packageReferences = (
 				BA67EB3229C05BD0007B87AD /* XCRemoteSwiftPackageReference "Alamofire" */,
 				BA67EB3529C05F76007B87AD /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				BAA0142F29C1ADB10084B54D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = BA90A9A229B855EA00F6E6EA /* Products */;
 			projectDirPath = "";
@@ -705,6 +712,14 @@
 				kind = branch;
 			};
 		};
+		BAA0142F29C1ADB10084B54D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -727,6 +742,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BA67EB3529C05F76007B87AD /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
 			productName = KakaoSDKUser;
+		};
+		BAA0143029C1ADB10084B54D /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAA0142F29C1ADB10084B54D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		BAA0143229C1ADB10084B54D /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAA0142F29C1ADB10084B54D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
