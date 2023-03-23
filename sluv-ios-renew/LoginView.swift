@@ -14,15 +14,12 @@ import KakaoSDKUser
 import GoogleSignIn
 import GoogleSignInSwift
 
-extension Font {
-    static let pretendardSemi_20 = Font.custom("Pretendard-SemiBold", size:20)
-    static let pretendardRegular_14 = Font.custom("Pretendard-Regular", size:14)
-}
-
 
 struct LoginView: View {
     @Binding private var isLoggedIn: Bool
+    @State var signupNeeded: Bool = false
     @AppStorage("token") var token: String=""
+    
     init(isLoggedIn: Binding<Bool>) {
         self._isLoggedIn = isLoggedIn
     }
@@ -34,85 +31,92 @@ struct LoginView: View {
     }
     
     var body: some View {
-        VStack {
-            Spacer()
-            VStack{
-                Image("logo")
-                    .padding(.bottom, 20.0)
-                Text("셀럽의 아이템 정보 집합소")
-                    .font(.pretendardSemi_20)
-                    .foregroundColor(Color(red: 0.14901960784313725, green: 0.14901960784313725, blue: 0.14901960784313725)    )
-                Text("스럽의 정보는 사랑스럽다!")
-                    .font(.pretendardRegular_14)
-                    .foregroundColor(Color(red: 0.41568627450980394, green: 0.41568627450980394, blue: 0.41568627450980394))
-                    .padding(1.0)
-            }
-            .padding()
-            Spacer()
+        if signupNeeded == false{
             VStack {
-                AppleSigninButton()
-                KakaoSigninButton()
-                GoogleSigninButton()
+                    Spacer()
+                    VStack{
+                        Image("logo")
+                            .padding(.bottom, 20.0)
+                        Text("셀럽의 아이템 정보 집합소")
+                            .font(.pretendardSemi_20)
+                            .foregroundColor(Color(red: 0.14901960784313725, green: 0.14901960784313725, blue: 0.14901960784313725)    )
+                        Text("스럽의 정보는 사랑스럽다!")
+                            .font(.pretendardRegular_14)
+                            .foregroundColor(Color(red: 0.41568627450980394, green: 0.41568627450980394, blue: 0.41568627450980394))
+                            .padding(1.0)
+                    }
+                    .padding()
+                    Spacer()
+                    VStack {
+                        AppleSigninButton(signupNeeded:$signupNeeded)
+                        KakaoSigninButton(signupNeeded:$signupNeeded)
+                        GoogleSigninButton(signupNeeded:$signupNeeded)
+                    }
+                    .padding()
+                    
+                    Spacer()
+                }
+                .frame(height:UIScreen.main.bounds.height)
+                .background(Color.white)
+                .navigationBarBackButtonHidden(true)
             }
-            .padding()
-            Spacer()
+            else{
+                TermsAgree()
+                    .navigationBarBackButtonHidden(true)
+            }
         }
-        .frame(height:UIScreen.main.bounds.height)
-        .background(Color.white)
+        
         
     }
-    
-}
 
 
-let base = String("http://15.165.98.183:8080")
-
-func socialLogin(token: String, snsType: String){
+public func socialLogin(token: String, snsType: String, signupNeeded: Binding<Bool>) {
+    let base = String("http://sluvdev-env.eba-vcrvfzjv.ap-northeast-2.elasticbeanstalk.com/app")
     let url = base+"/auth/social-login"
     let body = ["accessToken": token, "snsType": snsType] as Dictionary
+    struct TokenResponse: Codable {
+        let token: String
+    }
     AF.request(url,
                method: .post,
                parameters: body,
                encoding: JSONEncoding(options: []),
-                headers: ["Content-Type":"application/json", "Accept":"application/json"]).responseJSON
+               headers: ["Content-Type":"application/json", "Accept":"application/json"]).responseJSON
     { response in
-      switch response.result {
-      case .success:
-        if let data = try! response.result.get() as? [String: Any] {
-          print(data)
-        }
-      case .failure(let error):
-        print("Error: \(error)")
-        return
-      }
-    }
-    
-}
-
-func googleSignin() {
-    guard let rootViewController = UIApplication.shared.windows.first?.rootViewController else {
-            print("Error: root view controller not found")
+        switch response.result {
+        case .success(let data):
+            print(data)
+            if let json = data as? [String: Any],
+                let tokenData = json["result"] as? [String: Any],
+                let tokenJSON = try? JSONSerialization.data(withJSONObject: tokenData),
+                let tokenResponse = try? JSONDecoder().decode(TokenResponse.self, from: tokenJSON) {
+                let token = tokenResponse.token
+                print("JWT",token)
+                let statusCode:Any = json["code"] as? Int as Any
+                if statusCode as! Int == 1000 {
+                    print("statuscode=",statusCode)
+                    signupNeeded.wrappedValue = true
+                    print("1000 success")
+                    print(signupNeeded)
+                }
+            }
+        case .failure(let error):
+            print("Error: \(error)")
             return
         }
-  GIDSignIn.sharedInstance.signIn(
-    withPresenting: rootViewController) { signInResult, error in
-        guard error == nil else { return }
-            guard let signInResult = signInResult else { return }
-
-            signInResult.user.refreshTokensIfNeeded { user, error in
-                guard error == nil else { return }
-                guard let user = user else { return }
-
-                let idToken = user.idToken
-                let accessToken = user.accessToken.tokenString
-
-                print(accessToken)          // Send ID token to backend (example below).
-                socialLogin(token:accessToken, snsType:"GOOGLE")
-            }
     }
 }
 
+
+
+
+
+
+
+
 struct KakaoSigninButton: View{
+    @Binding  var signupNeeded: Bool
+
     var body: some View{
         Button {
             if (UserApi.isKakaoTalkLoginAvailable()) {
@@ -121,7 +125,7 @@ struct KakaoSigninButton: View{
                         print(error)
                     }
                     if let oauthToken = oauthToken{
-                        socialLogin(token:oauthToken.accessToken, snsType:"KAKAO")
+                        socialLogin(token:oauthToken.accessToken, snsType:"KAKAO",signupNeeded:$signupNeeded)
                     }
                 }
             } else {
@@ -131,7 +135,7 @@ struct KakaoSigninButton: View{
                     }
                     if let oauthToken = oauthToken{
                         print("kakao success")
-                        socialLogin(token:oauthToken.accessToken, snsType:"KAKAO")
+                        socialLogin(token:oauthToken.accessToken, snsType:"KAKAO",signupNeeded:$signupNeeded)
                     }
                 }
             }
@@ -145,6 +149,27 @@ struct KakaoSigninButton: View{
 }
 
 struct GoogleSigninButton: View{
+    @Binding  var signupNeeded: Bool
+    func googleSignin() {
+        guard let rootViewController = UIApplication.shared.windows.first?.rootViewController else {
+                print("Error: root view controller not found")
+                return
+            }
+      GIDSignIn.sharedInstance.signIn(
+        withPresenting: rootViewController) { signInResult, error in
+            guard error == nil else { return }
+                guard let signInResult = signInResult else { return }
+
+                signInResult.user.refreshTokensIfNeeded { user, error in
+                    guard error == nil else { return }
+                    guard let user = user else { return }
+
+                    let idToken = user.idToken!.tokenString
+                    socialLogin(token:idToken, snsType:"GOOGLE",signupNeeded:$signupNeeded)
+                }
+        }
+    }
+
     var body: some View{
         HStack{
             Image("google Logo")
@@ -168,11 +193,15 @@ struct GoogleSigninButton: View{
                 .blendMode(.overlay)
                 .opacity(0.1)
         )
-        
+
     }
 }
 
+
+
 struct AppleSigninButton : View{
+    @Binding var signupNeeded: Bool
+    @State var suhyeong: Bool = false
     var body: some View{
         SignInWithAppleButton(
             onRequest: { request in
@@ -185,7 +214,7 @@ struct AppleSigninButton : View{
                     switch authResults.credential{
                         case let appleIDCredential as ASAuthorizationAppleIDCredential:
                             let IdentityToken = String(data: appleIDCredential.identityToken!, encoding: .utf8)
-                            socialLogin(token:IdentityToken!, snsType:"APPLE")
+                        socialLogin(token:IdentityToken!, snsType:"APPLE", signupNeeded:$signupNeeded)
     
                     default:
                         break
@@ -198,9 +227,13 @@ struct AppleSigninButton : View{
         )
         .frame(width : UIScreen.main.bounds.width * 0.9, height:50)
         .cornerRadius(5)
+        .onAppear(perform: {
+            self.suhyeong = signupNeeded
+        })
     }
+    
+    
 }
-
 
 
 
