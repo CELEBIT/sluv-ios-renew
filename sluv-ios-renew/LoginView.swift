@@ -108,12 +108,6 @@ public func socialLogin(token: String, snsType: String, signupNeeded: Binding<Bo
 }
 
 
-
-
-
-
-
-
 struct KakaoSigninButton: View{
     @Binding  var signupNeeded: Bool
 
